@@ -1,0 +1,32 @@
+id: hark
+schema_version: 1
+display_name: Hark
+icon_url: https://app.hark.com/pwa-192.png
+icon_svg_url: https://app.hark.com/favicon.svg
+description: Drives Hark (app.hark.com) in a dedicated Chrome window so Prism can talk to Hark from mobile or Rokid glasses.
+version: 0.1.7
+plugin_protocol_version: "4"
+min_hub_version: 0.1.0
+integration_mode: desktop-automation
+transport: process
+managed_launch: true
+runtime_dependencies:
+  node: ">=22.0.0 <23.0.0"
+command: ["${runtime.node}", "index.js"]
+capabilities:
+  native_visible_input: true
+  native_visible_output: true
+  can_attach_session: true
+  can_start_session_with_message: true
+  can_open_draft: false
+  can_list_sessions: true
+  can_read_history: true
+  can_interrupt: false
+  can_approval: false
+  can_forward_sync: true
+  can_reverse_sync: false
+  can_plugin_wide_watch: false
+  can_wait_run: true
+  can_read_status: true
+  can_control_session: false
+  can_open_managed_terminal: false

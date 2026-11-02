@@ -1,0 +1,17 @@
+{
+  "name": "prism-plugin-hark",
+  "private": true,
+  "version": "0.1.7",
+  "description": "Prism PluginBridge plugin: drive Hark (app.hark.com) from Rokid glasses via Chrome CDP",
+  "main": "index.js",
+  "scripts": {
+    "probe": "node scripts/probe.js",
+    "chat": "node scripts/try-chat.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@rokid-prism/pluginbridge-plugin-sdk": "^0.1.1"
+  },
+  "engines": { "node": ">=22 <23" },
+  "license": "MIT"
+}

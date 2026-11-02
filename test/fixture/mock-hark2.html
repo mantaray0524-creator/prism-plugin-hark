@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Hark</title></head><body>
+<main><div id="msgs"><div class="m a">你好 Ray</div></div></main>
+<div class="bar"><div class="inner"><textarea id="t" placeholder="Message"></textarea><button id="plus" aria-label="Add">+</button><button id="go" disabled><svg width="16" height="16"><path d="M8 2v12"/></svg></button></div></div>
+<script>
+const msgs=document.getElementById('msgs'),t=document.getElementById('t'),go=document.getElementById('go');
+function add(cls,txt){const d=document.createElement('div');d.className='m '+cls;d.innerText=txt;msgs.appendChild(d);return d;}
+t.addEventListener('input',()=>{setTimeout(()=>{go.disabled=!t.value.trim();},600);});
+t.addEventListener('keydown',e=>{ /* Enter does NOT send */ });
+go.onclick=()=>{const v=t.value.trim();if(!v)return;add('u',v);t.value='';go.disabled=true;setTimeout(()=>add('a','收到：'+v),800);};
+</script></body></html>

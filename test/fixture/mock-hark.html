@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Hark</title></head><body>
+<nav>Chat Projects</nav>
+<main><div id="msgs"><div class="m a">你好 Ray，今天想做什么？</div></div></main>
+<form id="f"><textarea id="t" placeholder="Message Hark"></textarea><button type="submit" aria-label="Send">↑</button></form>
+<script>
+const msgs=document.getElementById('msgs'),t=document.getElementById('t');
+function add(cls,txt){const d=document.createElement('div');d.className='m '+cls;d.innerText=txt;msgs.appendChild(d);return d;}
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const v=t.value.trim();if(!v)return;add('u',v);t.value='';
+ setTimeout(()=>{const a=add('a','开工，我查一下。');add('x','Copy');
+  setTimeout(()=>{a.innerText='开工，我查一下。\n明天新加坡多云，27 到 31 度，下午可能有雷阵雨。';},2500);},1000);};
+</script></body></html>
